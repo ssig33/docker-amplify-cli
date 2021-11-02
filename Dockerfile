@@ -1,4 +1,4 @@
-FROM node:lts-bullseye
+FROM node:14-bullseye
 RUN apt update && apt install unar curl -y && apt clean
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unar awscliv2.zip && ./aws/install && rm -rf aws awscliv2.zip
 RUN aws --version
